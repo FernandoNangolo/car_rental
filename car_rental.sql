@@ -45,7 +45,7 @@ CREATE TABLE `cars` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Extraindo dados da tabela `cars`
+-- Extrating datas `cars`
 --
 
 INSERT INTO `cars` (`id`, `manufacturer`, `brand`, `model`, `registration_plate`, `type`, `fuel_type`, `transmission`, `mileage`, `photo`, `description`, `status`, `rented_by`) VALUES
