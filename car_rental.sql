@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 15-Jul-2024 às 19:34
--- Versão do servidor: 10.1.32-MariaDB
+-- Generation Time: 15-Jul-2024 at 19:34
+-- Server version: 10.1.32-MariaDB
 -- PHP Version: 7.2.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `cars`
+-- Table structure for `cars`
 --
 
 CREATE TABLE `cars` (
@@ -45,7 +45,7 @@ CREATE TABLE `cars` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Extrating datas `cars`
+-- Dumping data for table `cars`
 --
 
 INSERT INTO `cars` (`id`, `manufacturer`, `brand`, `model`, `registration_plate`, `type`, `fuel_type`, `transmission`, `mileage`, `photo`, `description`, `status`, `rented_by`) VALUES
@@ -63,7 +63,7 @@ INSERT INTO `cars` (`id`, `manufacturer`, `brand`, `model`, `registration_plate`
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `rental_history`
+-- Table structure for `rental_history`
 --
 
 CREATE TABLE `rental_history` (
@@ -76,7 +76,7 @@ CREATE TABLE `rental_history` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `users`
+-- Table structure for `users`
 --
 
 CREATE TABLE `users` (
@@ -86,7 +86,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Extraindo dados da tabela `users`
+-- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `username`, `password`) VALUES
@@ -139,13 +139,13 @@ ALTER TABLE `users`
 --
 
 --
--- Limitadores para a tabela `cars`
+-- Constraints for table `cars`
 --
 ALTER TABLE `cars`
   ADD CONSTRAINT `cars_ibfk_1` FOREIGN KEY (`rented_by`) REFERENCES `users` (`id`);
 
 --
--- Limitadores para a tabela `rental_history`
+-- Constraints for table `rental_history`
 --
 ALTER TABLE `rental_history`
   ADD CONSTRAINT `rental_history_ibfk_1` FOREIGN KEY (`car_id`) REFERENCES `cars` (`id`) ON DELETE CASCADE,
