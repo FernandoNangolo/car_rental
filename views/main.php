@@ -406,15 +406,7 @@
     };
 
     // Handle form submission
-    form.addEventListener('submit', event => {
-        // event.preventDefault();  // Prevent default form submission behavior
-
-    });
     
-    // Ensure form submission only happens when submit button is clicked
-    submitBtn.addEventListener('click', function() {
-        document.getElementById('addCarForm').submit();  // Manually submit the form
-    });
     
 });
 
